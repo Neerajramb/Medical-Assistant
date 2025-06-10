@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant</title>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- CSRF Token for Django AJAX POST requests -->
+    <script>
+        // Function to get CSRF token from Django's cookie
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getCookie('csrftoken');
+    </script>
+</head>
+<body class="font-inter bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="chat-container bg-white shadow-lg rounded-2xl flex flex-col overflow-hidden max-w-lg w-full h-[80vh]">
+        <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 text-center text-xl font-bold rounded-t-2xl shadow-md">
+            Medical Assistant
+        </header>
+
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4">
+            <!-- Initial welcome message -->
+            <div class="message assistant-message">
+                <p>Hello! I'm your medical assistant. How can I help you today?</p>
+            </div>
+        </div>
+
+        <div class="chat-input-area p-4 bg-gray-50 border-t border-gray-200 flex items-center">
+            <input type="text" id="user-input" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm" placeholder="Ask a medical question...">
+            <button id="send-button" class="ml-3 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md transition duration-200">
+                Send
+            </button>
+            <div id="loading-indicator" class="ml-3 hidden">
+                <div class="dot-spinner">
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your custom JavaScript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
