@@ -1,53 +1,4 @@
-⚕️ LLM-Based Medical Assistant System
-An intelligent, AI-powered conversational assistant designed to provide accurate and contextually relevant information on medical, health, and mental health topics. This project showcases the power of Retrieval Augmented Generation (RAG) by combining Large Language Models (LLMs) with a specialized knowledge base, ensuring reliable and grounded responses.
-
-✨ Features
-Intelligent Query Routing: Automatically classifies user queries as medical or non-medical to provide the most appropriate response.
-
-Contextual RAG Pipeline: Leverages a local vector database to retrieve specific medical information, augmenting LLM responses for factual accuracy and reducing hallucinations.
-
-General Medical Knowledge Fallback: If local data is insufficient for a medical query, the system intelligently defaults to the LLM's broader medical knowledge.
-
-Polite Non-Medical Redirection: Graciously informs users when queries fall outside its specialized medical scope.
-
-Dynamic & Extensible Knowledge Base: Easily update and expand the medical knowledge by modifying a simple text file, without needing to retrain the core LLM.
-
-Modern Web Interface: A responsive and intuitive chat UI built with HTML, CSS, and JavaScript.
-
-Scalable Architecture: Built on Python and Django, designed for potential expansion and production deployment.
-
-🚀 Why This Project Matters (Importance & Industrial Uses)
-In today's information-rich world, access to reliable health information is critical. This project addresses several key challenges and offers significant industrial value:
-
-Enhanced Information Accessibility: Provides an easy-to-use platform for individuals to quickly access general health knowledge, reducing the burden on healthcare professionals for routine queries.
-
-Improved Accuracy & Trust: By grounding LLM responses with RAG, the system significantly minimizes the risk of misinformation and hallucinations, which is paramount in sensitive domains like healthcare.
-
-Scalable Knowledge Management: The extensible knowledge base design means new research, guidelines, or medical updates can be integrated rapidly, keeping the assistant's information current without costly model retraining.
-
-Operational Efficiency for Healthcare: Can serve as a preliminary information source, triage tool, or educational resource in various healthcare settings, freeing up human experts for more complex tasks.
-
-Foundation for Specialized AI: The modular architecture provides a robust blueprint for developing highly specialized AI assistants in specific medical fields (e.g., drug interactions, rare disease information, clinical trial support).
-
-Showcase of Advanced AI Techniques: Demonstrates practical application of cutting-edge LLM, Vector Database, and RAG technologies, offering a valuable learning and development resource.
-
-💻 Technologies Used
-Python: The core programming language.
-
-Django: High-level Python web framework for the backend.
-
-Large Language Model (LLM): Gemini 2.0 Flash API for intelligent response generation and query classification.
-
-Vector Database: ChromaDB for efficient semantic search and knowledge retrieval.
-
-Text Embeddings: Sentence Transformers (all-MiniLM-L6-v2) for converting text into vector representations.
-
-Frontend: HTML, Custom CSS (mimicking Tailwind), and JavaScript for a responsive and aesthetic user interface.
-
-.env: For secure management of API keys.
-
-📂 Project Structure
-medical_assistant_project/
+⚕️ LLM-Based Medical Assistant SystemAn intelligent, AI-powered conversational assistant designed to provide accurate and contextually relevant information on medical, health, and mental health topics. This project showcases the power of Retrieval Augmented Generation (RAG) by combining Large Language Models (LLMs) with a specialized knowledge base, ensuring reliable and grounded responses.✨ FeaturesIntelligent Query Routing: Automatically classifies user queries as medical or non-medical to provide the most appropriate response.Contextual RAG Pipeline: Leverages a local vector database to retrieve specific medical information, augmenting LLM responses for factual accuracy and reducing hallucinations.General Medical Knowledge Fallback: If local data is insufficient for a medical query, the system intelligently defaults to the LLM's broader medical knowledge.Polite Non-Medical Redirection: Graciously informs users when queries fall outside its specialized medical scope.Dynamic & Extensible Knowledge Base: Easily update and expand the medical knowledge by modifying a simple text file, without needing to retrain the core LLM.Modern Web Interface: A responsive and intuitive chat UI built with HTML, CSS, and JavaScript.Scalable Architecture: Built on Python and Django, designed for potential expansion and production deployment.🚀 Why This Project Matters (Importance & Industrial Uses)In today's information-rich world, access to reliable health information is critical. This project addresses several key challenges and offers significant industrial value:Enhanced Information Accessibility: Provides an easy-to-use platform for individuals to quickly access general health knowledge, reducing the burden on healthcare professionals for routine queries.Improved Accuracy & Trust: By grounding LLM responses with RAG, the system significantly minimizes the risk of misinformation and hallucinations, which is paramount in sensitive domains like healthcare.Scalable Knowledge Management: The extensible knowledge base design means new research, guidelines, or medical updates can be integrated rapidly, keeping the assistant's information current without costly model retraining.Operational Efficiency for Healthcare: Can serve as a preliminary information source, triage tool, or educational resource in various healthcare settings, freeing up human experts for more complex tasks.Foundation for Specialized AI: The modular architecture provides a robust blueprint for developing highly specialized AI assistants in specific medical fields (e.g., drug interactions, rare disease information, clinical trial support).Showcase of Advanced AI Techniques: Demonstrates practical application of cutting-edge LLM, Vector Database, and RAG technologies, offering a valuable learning and development resource.💻 Technologies UsedPython: The core programming language.Django: High-level Python web framework for the backend.Large Language Model (LLM): Gemini 2.0 Flash API for intelligent response generation and query classification.Vector Database: ChromaDB for efficient semantic search and knowledge retrieval.Text Embeddings: Sentence Transformers (all-MiniLM-L6-v2) for converting text into vector representations.Frontend: HTML, Custom CSS (mimicking Tailwind), and JavaScript for a responsive and aesthetic user interface..env: For secure management of API keys.📂 Project Structuremedical_assistant_project/
 ├── venv/                     # Python Virtual Environment
 ├── medical_assistant_project/
 │   ├── __init__.py
@@ -79,70 +30,19 @@ medical_assistant_project/
 ├── .env                      # Environment variables (e.g., GEMINI_API_KEY) - IMPORTANT: Add to .gitignore!
 ├── .gitignore                # Specifies files/directories to ignore in Git
 └── manage.py                 # Django's command-line utility
-
-⚙️ How to Run
-Clone the Repository:
-
-git clone https://github.com/YourUsername/medical-assistant-project.git
+⚙️ How to RunClone the Repository:git clone https://github.com/YourUsername/medical-assistant-project.git
 cd medical-assistant-project
-
-Create and Activate Virtual Environment:
-
-python -m venv venv
+Create and Activate Virtual Environment:python -m venv venv
 # On Windows:
 .\venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
-
-Install Dependencies:
-
-pip install -r requirements.txt # (Assuming you'll create a requirements.txt)
+Install Dependencies:pip install -r requirements.txt # (Assuming you'll create a requirements.txt)
 # If not, install individually:
 # pip install django chromadb sentence-transformers requests python-dotenv numpy
-
-Set Up Environment Variables:
-Create a file named .env in the root of your project (same directory as manage.py and medical_data.txt).
-Add your Gemini API Key:
-
-GEMINI_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY"
-
-Replace "YOUR_ACTUAL_GEMINI_API_KEY" with your actual API key obtained from Google AI Studio.
-
-Prepare Medical Knowledge Base:
-Ensure you have medical_data.txt in the root directory with your desired medical facts.
-Run the script to populate your vector database:
-
-python load_data_to_vectordb.py
-
-(Optional: If you want to generate more data, run python generate_medical_facts.py)
-
-Run Django Migrations:
-
-python manage.py makemigrations medical_assistant_app
+Set Up Environment Variables:Create a file named .env in the root of your project (same directory as manage.py and medical_data.txt).Add your Gemini API Key:GEMINI_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY"
+Replace "YOUR_ACTUAL_GEMINI_API_KEY" with your actual API key obtained from Google AI Studio.Prepare Medical Knowledge Base:Ensure you have medical_data.txt in the root directory with your desired medical facts.Run the script to populate your vector database:python load_data_to_vectordb.py
+(Optional: If you want to generate more data, run python generate_medical_facts.py)Run Django Migrations:python manage.py makemigrations medical_assistant_app
 python manage.py migrate
-
-Start the Django Development Server:
-
-python manage.py runserver
-
-Access the Application:
-Open your web browser and navigate to http://127.0.0.1:8000/.
-
-📈 Future Enhancements
-User Authentication & Profiles: Allow users to create accounts and save chat history.
-
-Advanced Data Ingestion: Implement tools for ingesting PDFs, web pages, and other document formats into the knowledge base.
-
-Source Citation: Display the source documents from the vector database that were used to generate a response.
-
-Voice Input/Output: Integrate speech-to-text and text-to-speech capabilities.
-
-Multi-modal Inputs: Allow users to upload images (e.g., rash photos) for analysis (requires a multi-modal LLM).
-
-Real-time Streaming: Implement server-sent events (SSE) or WebSockets for streaming LLM responses.
-
-Admin Panel for Knowledge Base: Create a Django admin interface for managing medical_data.txt chunks directly.
-
-Deployment to Cloud: Prepare for scalable deployment on platforms like Google Cloud, AWS, or Heroku.
-
-Disclaimer: This LLM-Based Medical Assistant System is for informational and educational purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for any health concerns.
+Start the Django Development Server:python manage.py runserver
+Access the Application:Open your web browser and navigate to http://127.0.0.1:8000/.📈 Future EnhancementsUser Authentication & Profiles: Allow users to create accounts and save chat history.Advanced Data Ingestion: Implement tools for ingesting PDFs, web pages, and other document formats into the knowledge base.Source Citation: Display the source documents from the vector database that were used to generate a response.Voice Input/Output: Integrate speech-to-text and text-to-speech capabilities.Multi-modal Inputs: Allow users to upload images (e.g., rash photos) for analysis (requires a multi-modal LLM).Real-time Streaming: Implement server-sent events (SSE) or WebSockets for streaming LLM responses.Admin Panel for Knowledge Base: Create a Django admin interface for managing medical_data.txt chunks directly.Deployment to Cloud: Prepare for scalable deployment on platforms like Google Cloud, AWS, or Heroku.Disclaimer: This LLM-Based Medical Assistant System is for informational and educational purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for any health concerns.
