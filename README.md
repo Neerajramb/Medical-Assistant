@@ -32,8 +32,9 @@ In today's information-rich world, access to reliable health information is crit
 * Frontend: HTML, Custom CSS (mimicking Tailwind), and JavaScript for a responsive and aesthetic user interface.
 * .env: For secure management of API keys.
 
-📂 Project Structure
+##📂 Project Structure
 
+```bash
 medical_assistant_project/
 ├── venv/                     # Python Virtual Environment
 ├── medical_assistant_project/
@@ -66,6 +67,8 @@ medical_assistant_project/
 ├── .env                      # Environment variables (e.g., GEMINI_API_KEY) - IMPORTANT: Add to .gitignore!
 ├── .gitignore                # Specifies files/directories to ignore in Git
 └── manage.py                 # Django's command-line utility
+
+```
 
 ⚙️ How to Run
 
