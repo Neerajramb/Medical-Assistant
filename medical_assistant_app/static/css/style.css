@@ -1,186 +1,186 @@
-/* medical_assistant_app/static/css/style.css */
+    /* medical_assistant_app/static/css/style.css */
 
-/* Custom CSS to mimic Tailwind for rounded corners, shadows, and responsiveness */
+    /* Custom CSS to mimic Tailwind for rounded corners, shadows, and responsiveness */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6; /* bg-gray-100 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 1rem; /* p-4 */
-    margin: 0;
-}
-
-.chat-container {
-    background-color: #ffffff; /* bg-white */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-    border-radius: 1.5rem; /* rounded-2xl */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    max-width: 32rem; /* max-w-lg */
-    width: 100%; /* w-full */
-    height: 80vh; /* h-[80vh] */
-}
-
-header {
-    background-image: linear-gradient(to right, #3b82f6, #4f46e5); /* from-blue-500 to-indigo-600 */
-    color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 700; /* font-bold */
-    border-top-left-radius: 1.5rem; /* rounded-t-2xl */
-    border-top-right-radius: 1.5rem; /* rounded-t-2xl */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-}
-
-#chat-box {
-    flex: 1; /* flex-1 */
-    padding: 1rem; /* p-4 */
-    overflow-y: auto;
-    display: flex; /* Using flex for message spacing */
-    flex-direction: column;
-    gap: 1rem; /* space-y-4 */
-}
-
-.message {
-    max-width: 75%; /* Limit message width */
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
-    line-height: 1.5;
-}
-
-.user-message {
-    background-color: #dbeafe; /* bg-blue-100 */
-    color: #1e40af; /* text-blue-800 */
-    align-self: flex-end; /* Align to right */
-    border-bottom-right-radius: 0.25rem; /* rounded-br-sm */
-}
-
-.assistant-message {
-    background-color: #eff6ff; /* bg-gray-200 for a lighter grey */
-    color: #1f2937; /* text-gray-800 */
-    align-self: flex-start; /* Align to left */
-    border-bottom-left-radius: 0.25rem; /* rounded-bl-sm */
-}
-
-.chat-input-area {
-    padding: 1rem; /* p-4 */
-    background-color: #f9fafb; /* bg-gray-50 */
-    border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
-    display: flex;
-    align-items: center;
-}
-
-#user-input {
-    flex: 1; /* flex-1 */
-    padding: 0.75rem; /* p-3 */
-    border: 1px solid #d1d5db; /* border border-gray-300 */
-    border-radius: 0.5rem; /* rounded-lg */
-    outline: none; /* focus:outline-none */
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
-    transition: all 0.2s ease-in-out;
-}
-
-#user-input:focus {
-    /* These are comments indicating Tailwind classes, not actual CSS properties */
-    /* focus:ring-blue-500 */
-    /* focus:ring-2 */
-    outline: 2px solid #3b82f6; /* Equivalent to focus:ring-2 focus:ring-blue-500 */
-    outline-offset: 2px; /* Helps avoid outline overlapping border */
-}
-
-#send-button {
-    margin-left: 0.75rem; /* ml-3 */
-    padding: 0.75rem 1.5rem; /* px-6 py-3 */
-    background-color: #2563eb; /* bg-blue-600 */
-    color: #ffffff;
-    font-weight: 600; /* font-semibold */
-    border-radius: 0.5rem; /* rounded-lg */
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-}
-
-#send-button:hover {
-    background-color: #1d4ed8; /* hover:bg-blue-700 */
-}
-
-#send-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 */
-}
-
-/* Loading indicator (dot spinner) */
-.dot-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem; /* Adjusted size */
-    height: 2rem; /* Adjusted size */
-}
-
-.dot-spinner__dot {
-    width: 0.5rem; /* Adjusted size */
-    height: 0.5rem; /* Adjusted size */
-    background: #3b82f6; /* blue-500 */
-    border-radius: 50%;
-    animation: dot-spinner-bounce 0.8s infinite ease-in-out;
-    margin: 0 0.1rem; /* Slight spacing */
-}
-
-.dot-spinner__dot:nth-child(1) { animation-delay: -0.32s; }
-.dot-spinner__dot:nth-child(2) { animation-delay: -0.24s; }
-.dot-spinner__dot:nth-child(3) { animation-delay: -0.16s; }
-.dot-spinner__dot:nth-child(4) { animation-delay: -0.08s; }
-.dot-spinner__dot:nth-child(5) { animation-delay: -0.04s; } /* Adding more dots for smoother animation */
-.dot-spinner__dot:nth-child(6) { animation-delay: -0.02s; }
-.dot-spinner__dot:nth-child(7) { animation-delay: -0.01s; }
-.dot-spinner__dot:nth-child(8) { animation-delay: 0s; }
-
-@keyframes dot-spinner-bounce {
-    0%, 80%, 100% {
-        transform: scale(0);
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6; /* bg-gray-100 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 1rem; /* p-4 */
+        margin: 0;
     }
-    40% {
-        transform: scale(1);
-    }
-}
 
-/* Responsive adjustments */
-@media (max-width: 640px) { /* equivalent to sm: in Tailwind */
     .chat-container {
-        height: 95vh;
-        border-radius: 1rem; /* Slightly smaller rounded corners on mobile */
+        background-color: #ffffff; /* bg-white */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        border-radius: 1.5rem; /* rounded-2xl */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 32rem; /* max-w-lg */
+        width: 100%; /* w-full */
+        height: 80vh; /* h-[80vh] */
     }
 
     header {
-        font-size: 1.1rem;
-        border-radius: 1rem 1rem 0 0;
+        background-image: linear-gradient(to right, #3b82f6, #4f46e5); /* from-blue-500 to-indigo-600 */
+        color: #ffffff;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.25rem; /* text-xl */
+        font-weight: 700; /* font-bold */
+        border-top-left-radius: 1.5rem; /* rounded-t-2xl */
+        border-top-right-radius: 1.5rem; /* rounded-t-2xl */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    }
+
+    #chat-box {
+        flex: 1; /* flex-1 */
+        padding: 1rem; /* p-4 */
+        overflow-y: auto;
+        display: flex; /* Using flex for message spacing */
+        flex-direction: column;
+        gap: 1rem; /* space-y-4 */
     }
 
     .message {
-        max-width: 90%; /* Allow messages to take more width on small screens */
+        max-width: 75%; /* Limit message width */
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem; /* rounded-lg */
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+        line-height: 1.5;
+    }
+
+    .user-message {
+        background-color: #dbeafe; /* bg-blue-100 */
+        color: #1e40af; /* text-blue-800 */
+        align-self: flex-end; /* Align to right */
+        border-bottom-right-radius: 0.25rem; /* rounded-br-sm */
+    }
+
+    .assistant-message {
+        background-color: #eff6ff; /* bg-gray-200 for a lighter grey */
+        color: #1f2937; /* text-gray-800 */
+        align-self: flex-start; /* Align to left */
+        border-bottom-left-radius: 0.25rem; /* rounded-bl-sm */
     }
 
     .chat-input-area {
-        flex-direction: row; /* Keep elements in a row */
-        padding: 0.75rem;
+        padding: 1rem; /* p-4 */
+        background-color: #f9fafb; /* bg-gray-50 */
+        border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
+        display: flex;
+        align-items: center;
     }
 
     #user-input {
-        padding: 0.6rem;
+        flex: 1; /* flex-1 */
+        padding: 0.75rem; /* p-3 */
+        border: 1px solid #d1d5db; /* border border-gray-300 */
+        border-radius: 0.5rem; /* rounded-lg */
+        outline: none; /* focus:outline-none */
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+        transition: all 0.2s ease-in-out;
+    }
+
+    #user-input:focus {
+        /* These are comments indicating Tailwind classes, not actual CSS properties */
+        /* focus:ring-blue-500 */
+        /* focus:ring-2 */
+        outline: 2px solid #3b82f6; /* Equivalent to focus:ring-2 focus:ring-blue-500 */
+        outline-offset: 2px; /* Helps avoid outline overlapping border */
     }
 
     #send-button {
-        padding: 0.6rem 1rem;
-        margin-left: 0.5rem;
+        margin-left: 0.75rem; /* ml-3 */
+        padding: 0.75rem 1.5rem; /* px-6 py-3 */
+        background-color: #2563eb; /* bg-blue-600 */
+        color: #ffffff;
+        font-weight: 600; /* font-semibold */
+        border-radius: 0.5rem; /* rounded-lg */
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
     }
-}
+
+    #send-button:hover {
+        background-color: #1d4ed8; /* hover:bg-blue-700 */
+    }
+
+    #send-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 */
+    }
+
+    /* Loading indicator (dot spinner) */
+    .dot-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem; /* Adjusted size */
+        height: 2rem; /* Adjusted size */
+    }
+
+    .dot-spinner__dot {
+        width: 0.5rem; /* Adjusted size */
+        height: 0.5rem; /* Adjusted size */
+        background: #3b82f6; /* blue-500 */
+        border-radius: 50%;
+        animation: dot-spinner-bounce 0.8s infinite ease-in-out;
+        margin: 0 0.1rem; /* Slight spacing */
+    }
+
+    .dot-spinner__dot:nth-child(1) { animation-delay: -0.32s; }
+    .dot-spinner__dot:nth-child(2) { animation-delay: -0.24s; }
+    .dot-spinner__dot:nth-child(3) { animation-delay: -0.16s; }
+    .dot-spinner__dot:nth-child(4) { animation-delay: -0.08s; }
+    .dot-spinner__dot:nth-child(5) { animation-delay: -0.04s; } /* Adding more dots for smoother animation */
+    .dot-spinner__dot:nth-child(6) { animation-delay: -0.02s; }
+    .dot-spinner__dot:nth-child(7) { animation-delay: -0.01s; }
+    .dot-spinner__dot:nth-child(8) { animation-delay: 0s; }
+
+    @keyframes dot-spinner-bounce {
+        0%, 80%, 100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) { /* equivalent to sm: in Tailwind */
+        .chat-container {
+            height: 95vh;
+            border-radius: 1rem; /* Slightly smaller rounded corners on mobile */
+        }
+
+        header {
+            font-size: 1.1rem;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .message {
+            max-width: 90%; /* Allow messages to take more width on small screens */
+        }
+
+        .chat-input-area {
+            flex-direction: row; /* Keep elements in a row */
+            padding: 0.75rem;
+        }
+
+        #user-input {
+            padding: 0.6rem;
+        }
+
+        #send-button {
+            padding: 0.6rem 1rem;
+            margin-left: 0.5rem;
+        }
+    }
