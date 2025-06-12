@@ -2,7 +2,7 @@
 ## ⚕️ LLM-Based Medical Assistant System
 
 An intelligent, AI-powered conversational assistant designed to provide accurate and contextually relevant information on medical, health, and mental health topics. This project showcases the power of Retrieval Augmented Generation (RAG) by combining Large Language Models (LLMs) with a specialized knowledge base, ensuring reliable and grounded responses.
----
+
 ## ✨ Features
 
 * Intelligent Query Routing: Automatically classifies user queries as medical or non-medical to provide the most appropriate response.
@@ -74,20 +74,22 @@ medical_assistant_project/
 ## ⚙️ How to Run
 
 1. Clone the Repository:
+```bash
 git clone https://github.com/YourUsername/medical-assistant-project.git
 cd medical-assistant-project
-
+```
 2. Create and Activate Virtual Environment:
 python -m venv venv
-# On Windows:
+On Windows:
 .\venv\Scripts\activate
-# On macOS/Linux:
+On macOS/Linux:
 source venv/bin/activate
 
 3. Install Dependencies:
 pip install -r requirements.txt # (Assuming you'll create a requirements.txt)
-# If not, install individually:
-# pip install django chromadb sentence-transformers requests python-dotenv numpy
+
+If not, install individually:
+pip install django chromadb sentence-transformers requests python-dotenv numpy
 
 4. Set Up Environment Variables:
 Create a file named .env in the root of your project (same directory as manage.py and medical_data.txt).
@@ -123,4 +125,5 @@ Open your web browser and navigate to http://127.0.0.1:8000/.
    * Deployment to Cloud: Prepare for scalable deployment on platforms like Google Cloud, AWS, or Heroku.
 Disclaimer: This LLM-Based Medical Assistant System is for informational and educational purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for any health concerns.
 
-## NEERAJ RAM B
+## 🧑‍💻 Author
+**NEERAJ RAM B**  
