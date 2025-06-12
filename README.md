@@ -1,9 +1,9 @@
 
-⚕️ LLM-Based Medical Assistant System
+## ⚕️ LLM-Based Medical Assistant System
 
 An intelligent, AI-powered conversational assistant designed to provide accurate and contextually relevant information on medical, health, and mental health topics. This project showcases the power of Retrieval Augmented Generation (RAG) by combining Large Language Models (LLMs) with a specialized knowledge base, ensuring reliable and grounded responses.
-
-✨ Features
+---
+## ✨ Features
 
 * Intelligent Query Routing: Automatically classifies user queries as medical or non-medical to provide the most appropriate response.
 * Contextual RAG Pipeline: Leverages a local vector database to retrieve specific medical information, augmenting LLM responses for factual accuracy and reducing hallucinations.
@@ -13,7 +13,8 @@ An intelligent, AI-powered conversational assistant designed to provide accurate
 * Modern Web Interface: A responsive and intuitive chat UI built with HTML, CSS, and JavaScript.
 * Scalable Architecture: Built on Python and Django, designed for potential expansion and production deployment.
 
-🚀 Why This Project Matters (Importance & Industrial Uses)
+
+## 🚀 Why This Project Matters (Importance & Industrial Uses)
 
 In today's information-rich world, access to reliable health information is critical. This project addresses several key challenges and offers significant industrial value:
 * Enhanced Information Accessibility: Provides an easy-to-use platform for individuals to quickly access general health knowledge, reducing the burden on healthcare professionals for routine queries.
@@ -23,7 +24,7 @@ In today's information-rich world, access to reliable health information is crit
 * Foundation for Specialized AI: The modular architecture provides a robust blueprint for developing highly specialized AI assistants in specific medical fields (e.g., drug interactions, rare disease information, clinical trial support).
 * Showcase of Advanced AI Techniques: Demonstrates practical application of cutting-edge LLM, Vector Database, and RAG technologies, offering a valuable learning and development resource.
 
-💻 Technologies Used
+## 💻 Technologies Used
 * Python: The core programming language.
 * Django: High-level Python web framework for the backend.
 * Large Language Model (LLM): Gemini 2.0 Flash API for intelligent response generation and query classification.
@@ -32,7 +33,7 @@ In today's information-rich world, access to reliable health information is crit
 * Frontend: HTML, Custom CSS (mimicking Tailwind), and JavaScript for a responsive and aesthetic user interface.
 * .env: For secure management of API keys.
 
-##📂 Project Structure
+## 📂 Project Structure
 
 ```bash
 medical_assistant_project/
@@ -70,7 +71,7 @@ medical_assistant_project/
 
 ```
 
-⚙️ How to Run
+## ⚙️ How to Run
 
 1. Clone the Repository:
 git clone https://github.com/YourUsername/medical-assistant-project.git
@@ -122,4 +123,4 @@ Open your web browser and navigate to http://127.0.0.1:8000/.
    * Deployment to Cloud: Prepare for scalable deployment on platforms like Google Cloud, AWS, or Heroku.
 Disclaimer: This LLM-Based Medical Assistant System is for informational and educational purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for any health concerns.
 
-@NEERAJ RAM B
+## NEERAJ RAM B
