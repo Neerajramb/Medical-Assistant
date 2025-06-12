@@ -118,3 +118,5 @@ Open your web browser and navigate to http://127.0.0.1:8000/.
    * Admin Panel for Knowledge Base: Create a Django admin interface for managing medical_data.txt chunks directly.
    * Deployment to Cloud: Prepare for scalable deployment on platforms like Google Cloud, AWS, or Heroku.
 Disclaimer: This LLM-Based Medical Assistant System is for informational and educational purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for any health concerns.
+
+@NEERAJ RAM B
